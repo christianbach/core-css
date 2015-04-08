@@ -1,0 +1,22 @@
+{
+  "name": "core-css",
+  "description": "Latest and greatest!",
+  "version": "1.0.0",
+  "main": [
+    "less/typo.less"
+  ],
+  "private": true,
+  "ignore": [
+    "/.*",
+    "_config.yml",
+    "CNAME",
+    "composer.json",
+    "CONTRIBUTING.md",
+    "docs",
+    "js/tests",
+    "test-infra"
+  ],
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
+}

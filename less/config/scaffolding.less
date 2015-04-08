@@ -1,0 +1,105 @@
+﻿*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeSpeed;
+    box-sizing: border-box;
+    font-size: @font-size-base;
+    background: @dark;
+}
+
+
+body {
+    font-family: @font-family-base;
+    font-size: inherit;
+    line-height: @line-height-base;
+    color: @text-color;
+    background-color: @body-bg;
+    margin: 0;
+    padding: 0;
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -ms-font-feature-settings: "kern";
+    font-feature-settings: "kern";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    padding-top: @nav-bar-height;
+    position: relative;
+}
+
+body.open {
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+// Links
+a {
+    color: @link-color;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &:hover,
+    &:focus {
+        color: @link-hover-color;
+        text-decoration: @link-hover-decoration;
+    }
+}
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+figure {
+    margin: 0;
+}
+
+
+// Images
+img {
+    vertical-align: middle;
+}
+
+// Custom element
+dn-resource {
+    display: block;
+}
+
+
+h1 {
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul {
+    padding: 0;
+}
+
+.sprite {
+    display: block;
+}

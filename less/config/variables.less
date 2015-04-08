@@ -1,0 +1,177 @@
+﻿// Colors
+@dn-turquoise:                          #89ccca; //different from @turquoise:
+@dn-lightblue:                          #98c3da;//different from @lightblue:
+@grey1:                                 #ededed;
+@grey2:                                 #dadada;
+@grey3:                                 #b2b2b2;
+@grey4:                                 #878787;
+@grey5:                                 #575757;
+@grey6:                                 #333333;
+
+@grey-superlight:                       #eee;
+@grey-lightest:                         #ddd;
+@grey-lighter:                          #bbb;
+@grey-light:                            #999;
+@grey:                                  #777;
+@grey-dark:                             #555;
+@grey-darker:                           #222;
+@yellow:                                #ffed00;
+@dark:                                  #212121;
+@orange:                                #ef7d00;
+@red:                                   #e30613;
+@red-dark:                              #e10a1a;
+@pink:                                  #e6007e;
+@green:                                 #83ad02;
+@purple:                                #c3006b;
+@bluegrey:                              #6d838f;
+@turquoise:                             #6ecfc6;
+@lightblue:                             #8bbeda;
+@blue:                                  #017dfc;
+@text-color:                            #000;
+@body-bg:                               #FFF;
+
+// Typography
+@font-family-sans-serif:                Arial, Helvetica, sans-serif;
+@font-family-serif:                     Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:                 Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-headings:                  "Publico Banner Bold";
+@font-family-headings-light:            "Publico Banner Light";
+@font-family-headings-black:            "Publico Headline Black";
+@font-family-headings-sans-serif:       "Guardian Sans Regular";
+@font-family-headings-sans-serif-light: "Guardian Sans Web Light";
+@font-family-headings-sans-serif-bold:  "Guardian Sans Web Bold";
+
+@font-family-base:                      @font-family-sans-serif;
+@font-size-base-mobile:                 @FONT_BASE;
+@font-size-base:                        16px;
+@font-size-paragraph:                   19px;
+@font-size-sans-paragraph:              18px;
+@font-size-base-tiny:                   10px;
+@font-size-base-smaller:                12px;
+@font-size-base-small:                  14px;
+@font-size-tiny:                        12px;
+@font-size-small:                       14px;
+@font-size-huge:                        45px;
+@font-size-jumbo:                       60px;
+@font-size-h1:                          45px;
+@font-size-h1-xxs:                      30px;
+@font-size-h1-xs:                       35px;
+@font-size-h2:                          26px;
+@font-size-h3:                          24px;
+@font-size-h4:                          20px;
+@font-size-h5:                          18px;
+@font-size-h6:                          @font-size-base;
+
+
+@line-height-base:                      1.5; // 20/16
+@line-height-computed:                  floor((@font-size-base * @line-height-base));
+@line-height-blockquote:                floor((@font-size-h5 * @line-height-base));
+@line-height-jumbo:                     floor((@font-size-jumbo * @line-height-base));
+
+// Headings
+@headings-font-family:                  @font-family-headings;
+@headings-font-weight:                  400;
+@headings-font-weight-bold:             600;
+@headings-line-height:                  1.1;
+@headings-color:                        #000;
+
+// Links
+@link-color:                            @text-color;
+@link-hover-color:                      @link-color;
+@link-hover-decoration:                 none;
+
+// opacity
+@opacity-hover-inactive:                .7;
+@opacity-hover-active:                  1;
+@opacity-hover-disabled:                .5;
+@opacity-transition:                    opacity .1s ease-in;
+
+// Dialog
+@dialog-max-width:                      615px;
+
+// Z-index
+@zindex-baseline:                       10000;
+@zindex-preferences-menu:               @zindex-baseline + 1300;
+@zindex-header-fixed:                   @zindex-baseline + 1200;
+@zindex-carousel-title:                 @zindex-baseline + 100;
+@zindex-carousel-caption:               @zindex-baseline + 700;
+@zindex-carousel-caption-title-link:    @zindex-baseline + 100;
+@zindex-carousel-indicators:            @zindex-baseline + 800;
+@zindex-carousel-next-prev:             @zindex-baseline + 900;
+@zindex-image-caption:                  @zindex-baseline + 700;
+@zindex-article-section:                @zindex-baseline + 1100;
+@zindex-android-smart-banner:           @zindex-baseline + 1400;
+@zindex-edition-notification:           @zindex-baseline + 1210;
+@zindex-edition-notification-number:    @zindex-baseline + 1220;
+
+//  Media queries
+@screen-xxs:                            @SCREEN_XXS;
+@screen-xxs-min:                        @screen-xxs;
+@screen-xs:                             @SCREEN_XS;
+@screen-xs-min:                         @screen-xs;
+@screen-sm:                             @SCREEN_SM;
+@screen-sm-min:                         @screen-sm;
+@screen-md:                             @SCREEN_MD;
+@screen-md-min:                         @screen-md;
+@screen-lg:                             @SCREEN_LG;
+@screen-lg-min:                         @screen-lg;
+@screen-hd:                             @SCREEN_HD;
+@screen-hd-min:                         @screen-hd;
+
+// navbar
+@nav-bar-height:                        44px;
+@android-smart-banner-height:           78px;
+
+//unauthorized-banner:
+@unauthorized-banner-desktop-height:    70px;
+
+@unauthorized-banner-sm-breakpoint:     1300px;
+
+// article-toolbar
+@toolbar-default-top-position:          10px;
+@toolbar-fixed-top-position: @nav-bar-height + 16px;
+
+// datepicker
+@datepicker-header-background:          #e5e5e5;
+@datepicker-header-active-background:   #e5e5e5;
+@datepicker-border-color:               #a1a1a1;
+
+// sidebar
+@side-bar-width:                        380px;
+
+// page
+@page-max-width:                        @screen-hd;
+@page-min-width:                        @screen-xs;
+
+// article
+@article-max-width:                            (@page-max-width - @side-bar-width);
+@article-text-size-factor-xsmall:              0.75;
+@article-text-size-factor-small:               0.9;
+@article-text-size-factor-medium:              1;
+@article-text-size-factor-large:               1.1;
+@article-text-size-factor-xlarge:              1.25;
+
+//article-content
+@article-content-colored-border-color: @yellow;
+@article-content-colored-border-width: 12px;
+
+// preference popup
+@popup-menu-background-color:           #f4f5f4;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:                         (@screen-sm-min - 1);
+@screen-sm-max:                         (@screen-md-min - 1);
+@screen-md-max:                         (@screen-lg-min - 1);
+
+@mq-xxs:                                ~"only screen and (min-width: @{screen-xxs})";
+@mq-xs:                                 ~"only screen and (min-width: @{screen-xs})";
+@mq-sm:                                 ~"only screen and (min-width: @{screen-sm})";
+@mq-md:                                 ~"only screen and (min-width: @{screen-md})";
+@mq-lg:                                 ~"only screen and (min-width: @{screen-lg})";
+@mq-retina:                             ~"only screen and (-webkit-min-device-pixel-ratio: 1.25), only screen and (min--moz-device-pixel-ratio: 1.25), only screen and (-o-min-device-pixel-ratio: 1.25/1), only screen and (min-device-pixel-ratio: 1.25), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)";
+
+@mq-xxs-only:                           ~"only screen and (max-width: @{screen-xxs})";
+@mq-xs-only:                            ~"only screen and (min-width: @{screen-xxs}) and (max-width: @{screen-xs})";
+@mq-sm-only:                            ~"only screen and (min-width: @{screen-xs}) and (max-width: @{screen-sm-min})";
+@mq-md-only:                            ~"only screen and (min-width: @{screen-sm}) and (max-width: @{screen-md-min})";
+@mq-lg-only:                            ~"only screen and (min-width: @{screen-md}) and (max-width: @{screen-lg-min})";

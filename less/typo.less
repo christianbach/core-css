@@ -1,0 +1,267 @@
+// Typo
+//
+// Simple utils designed to make life easier.
+//
+// Styleguide 4
+
+﻿// load custom fonts, important to only load what we need.
+.load-font-face(Guardian Sans Web Light, GuardianSans-Light-Web);
+.load-font-face(Guardian Sans Regular, GuardianSans-Regular-Web);
+.load-font-face(Guardian Sans Web Bold, GuardianSans-Bold-Web);
+.load-font-face(Publico Roman, PublicoHeadline-Roman-Web);
+.load-font-face(Publico Banner Light, PublicoBanner-Light-Web);
+.load-font-face(Publico Headline Black, PublicoHeadline-Black-Web);
+.load-font-face(Publico Banner Bold, PublicoBanner-Bold-Web);
+
+// Font variants
+.font-variant(@family, @weight: @headings-font-weight, @lineHeight: @headings-line-height, @color: @headings-color) when (@family = "black") {
+    .font-family(@font-family-headings-black, @weight, @lineHeight, @color);
+}
+ 
+.font-variant(@family, @weight: @headings-font-weight, @lineHeight: @headings-line-height, @color: @headings-color) when (@family = "light") {
+    .font-family(@font-family-headings-light, @weight, @lineHeight, @color);
+}
+
+.font-variant(@family, @weight: @headings-font-weight, @lineHeight: @headings-line-height, @color: @headings-color) when (@family = "light-bold") {
+    .font-family(@font-family-headings-light, @headings-font-weight-bold, @lineHeight, @color);
+}
+
+.font-variant(@family, @weight: @headings-font-weight, @lineHeight: @headings-line-height, @color: @headings-color) when (@family = "sans") {
+    .font-family(@font-family-headings-sans-serif, @weight, @lineHeight, @color);
+}
+
+.font-variant(@family, @weight: @headings-font-weight, @lineHeight: @headings-line-height, @color: @headings-color) when (@family = "sans-light") {
+    .font-family(@font-family-headings-sans-serif-light, @weight, @lineHeight, @color);
+}
+
+.font-variant(@family, @weight: @headings-font-weight, @lineHeight: @headings-line-height, @color: @headings-color) when (@family = "sans-bold") {
+    .font-family(@font-family-headings-sans-serif-bold, @weight, @lineHeight, @color);
+}
+
+// set font-family for all headings
+h1, h2, h3, h4, h5, h6 {
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+    line-height: @headings-line-height;
+    color: @headings-color;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: @headings-font-family;
+    font-weight: @headings-font-weight;
+    line-height: @headings-line-height;
+    color: @headings-color;
+
+    &--sans {
+        font-family: @font-family-headings-sans-serif;
+
+        &--light {
+            font-weight: normal;
+            font-family: @font-family-headings-sans-serif-light;
+            line-height: @headings-line-height;
+        }
+
+        &--bold {
+            font-family: @font-family-headings-sans-serif-bold;
+        }
+    }
+
+    &--light {
+        font-weight: normal;
+        font-family: @font-family-headings-light;
+    }
+
+    &--black {
+        font-family: @font-family-headings-black;
+    } 
+}
+
+// add margins for h1-h3
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    margin: 0;
+    &--with-margin {
+        margin-top: @line-height-computed;
+        margin-bottom: (@line-height-computed / 2);
+    }
+}
+
+// add margins for h4-h6
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin: 0;
+    &--with-margin {
+        margin-top: (@line-height-computed / 2);
+        margin-bottom: (@line-height-computed / 2);
+    }
+}
+
+// H1
+//
+// H1 headings.
+//
+// .h1                  - Make any element a h1.
+// .h1--black           - Black.
+// .h1--light           - Light.
+// .h1--huge            - Make it huge.
+// .h1--sans            - Sans.
+// .h1--sans--light     - Sans light.
+// .h1--sans--bold      - Sans bold.
+//
+// Markup:
+// <h1 class="{$modifiers}">I'm a h1 heading</h1>
+//
+// Styleguide 4.1
+h1, .h1 {
+    .font-size(@font-size-h1, @font-size-base);
+
+    &--huge {
+        .font-size(@font-size-huge, @font-size-base);
+    }
+    
+    &--jumbo {
+        .font-size(@font-size-jumbo, @font-size-base);        
+    }
+}
+
+// H2
+//
+// H2 heading
+//
+// .h2                  - Make any element a h2.
+// .h2--black           - Black.
+// .h2--light           - Light.
+// .h2--sans            - Sans.
+// .h2--sans--light     - Sans light.
+// .h2--sans--bold      - Sans bold.
+//
+// Markup:
+// <h2 class="{$modifiers}">I'm a h2 heading</h2>
+//
+// Styleguide 4.2
+h2, .h2 { .font-size(@font-size-h2, @font-size-base); }
+
+// h3
+//
+// h3 heading
+//
+// .h3                  - Make any element a h3.
+// .h3--black           - Black.
+// .h3--light           - Light.
+// .h3--sans            - Sans.
+// .h3--sans--light     - Sans light.
+// .h3--sans--bold      - Sans bold.
+//
+// Markup:
+// <h3 class="{$modifiers}">I'm a h3 heading</h3>
+//
+// Styleguide 4.3
+h3, .h3 { .font-size(@font-size-h3, @font-size-base); }
+
+// h4
+//
+// h4 heading
+//
+// .h4                  - Make any element a h4.
+// .h4--black           - Black.
+// .h4--light           - Light.
+// .h4--sans            - Sans.
+// .h4--sans--light     - Sans light.
+// .h4--sans--bold      - Sans bold.
+//
+// Markup:
+// <h4 class="{$modifiers}">I'm a h4 heading</h4>
+//
+// Styleguide 4.4
+h4, .h4 { .font-size(@font-size-h4, @font-size-base); }
+
+// h5
+//
+// h5 heading
+//
+// .h5                  - Make any element a h5.
+// .h5--black           - Black.
+// .h5--light           - Light.
+// .h5--sans            - Sans.
+// .h5--sans--light     - Sans light.
+// .h5--sans--bold      - Sans bold.
+//
+// Markup:
+// <h5 class="{$modifiers}">I'm a h5 heading</h5>
+//
+// Styleguide 4.5
+h5, .h5 { .font-size(@font-size-h5, @font-size-base); }
+
+// h6
+//
+// h6 heading
+//
+// .h6                  - Make any element a h6.
+// .h6--black           - Black.
+// .h6--light           - Light.
+// .h6--sans            - Sans.
+// .h6--sans--light     - Sans light.
+// .h6--sans--bold      - Sans bold.
+//
+// Markup:
+// <h6 class="{$modifiers}">I'm a h6 heading</h6>
+//
+// Styleguide 4.6
+h6, .h6 { .font-size(@font-size-h6, @font-size-base);  }
+
+// Paragraph
+//
+// Just your basic paragraph
+//
+// Markup:
+// <p class="{$modifiers}">I'm a paragraph</p>
+//
+// Styleguide 4.7
+p {
+    margin: 0 0 (@line-height-computed / 2);
+}
+
+// Paragraph
+//
+// Just your basic paragraph
+//
+// Markup:
+// <p class="{$modifiers}">I'm a paragraph</p>
+//
+// Styleguide 4.7
+p, 
+.p {
+    .font-size(@font-size-paragraph, @font-size-base);
+    font-family: @font-family-serif;
+    font-weight: @headings-font-weight;
+    margin: 0 0 (@line-height-computed / 2);
+}
+
+.body-text {
+    font-family: @font-family-sans-serif;
+}
+
+small, .small {
+    font-family: @font-family-sans-serif;
+    .font-size(@font-size-small, @font-size-base); 
+
+    &--sans {
+        font-family: @font-family-headings-sans-serif;
+
+        &--light {
+            font-weight: normal;
+            font-family: @font-family-headings-sans-serif-light;
+        }
+
+        &--bold {
+            font-family: @font-family-headings-sans-serif-bold;
+        }
+    }
+}
+
+.small--tiny {
+    font-family: @font-family-sans-serif;
+    .font-size(@font-size-tiny, @font-size-base); 
+}
